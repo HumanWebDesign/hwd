@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://humanwebdesign.netlify.app/sitemap.xml
+Sitemap: https://humanwebdesign.cl/sitemap.xml
