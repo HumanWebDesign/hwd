@@ -1,310 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio de Proyectos Web — Human Web Design Chile</title>
-    <meta name="description" content="Conoce los proyectos web que hemos desarrollado: landing pages, tiendas online y sitios institucionales para negocios chilenos." />
-    <link rel="canonical" href="https://humanwebdesign.cl/portafolio.html" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Proyectos Web — Human Web Design Chile</title>
+  <meta name="description" content="Conoce los proyectos web que hemos desarrollado: landing pages, tiendas online y sitios institucionales para negocios chilenos." />
+  <link rel="canonical" href="https://humanwebdesign.cl/portafolio.html" />
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-  <body>
+<body>
 
-    <!-- ============================================================
-        NAVBAR
-        ============================================================ -->
-    <header class="navbar">
-      <div class="container">
-        <a href="index.html" class="nav-logo" style="display:flex; align-items:center; gap:.5rem;">
-            <img src="assets/img/logo.png" alt="" style="height:40px; width:40px; object-fit:contain;" />
-            Human <span>Web</span> Design
-        </a>
-
-        <nav class="nav-links">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="portafolio.html">Portafolio</a>
-          <a href="index.html#nosotros">Nosotros</a>
-          <a href="index.html#contacto">Contacto</a>
-        </nav>
-
-        <div class="nav-cta">
-          <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
-        </div>
-
-        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-      <nav class="mobile-menu" style="display:none">
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Human Web Design" />
+        Human <span>Web</span> Design
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
         <a href="portafolio.html">Portafolio</a>
         <a href="index.html#nosotros">Nosotros</a>
         <a href="index.html#contacto">Contacto</a>
-        <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
       </nav>
-    </header>
-
-
-    <!-- ============================================================
-        PAGE HERO
-        ============================================================ -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="section-label">Nuestro trabajo</span>
-        <h1 class="section-title" style="text-align:center">
-          Proyectos que <span>hablan</span> por sí solos
-        </h1>
-        <p class="section-sub" style="text-align:center;margin-inline:auto;margin-top:.75rem">
-          Cada proyecto es único. Aquí te mostramos algunos de los sitios que hemos construido
-          para clientes reales.
-        </p>
+      <div class="nav-cta">
+        <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
       </div>
-    </section>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
+    </nav>
+  </header>
 
 
-    <!-- ============================================================
-        PORTAFOLIO COMPLETO CON FILTROS
-        ============================================================ -->
-    <section class="portfolio-full">
-      <div class="container">
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Nuestro trabajo</span>
+      <h1 class="section-title">Proyectos que <span>hablan</span> por sí solos</h1>
+      <p class="section-sub">
+        Cada proyecto es único. Aquí te mostramos algunos de los sitios que hemos construido
+        para clientes reales.
+      </p>
+    </div>
+  </section>
 
-        <!-- Barra de filtros: los data-filter deben coincidir con data-category de las tarjetas -->
-        <div class="filter-bar">
-          <button class="filter-btn active" data-filter="todos">Todos</button>
-          <button class="filter-btn" data-filter="landing-page">Landing Page</button>
-          <button class="filter-btn" data-filter="web-institucional">Web Institucional</button>
-          <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-          <button class="filter-btn" data-filter="reservas">Sitio de Reservas</button>
-        </div>
 
-        <!-- Grid de proyectos
-            ─────────────────────────────────────────────────────────
-            Para AGREGAR un proyecto nuevo:
-              1. Copia uno de los bloques <div class="project-card"> completo.
-              2. Cambia el data-category al filtro correspondiente.
-              3. Cambia la clase thumb-grad-X (del 1 al 6) para otro color.
-              4. Actualiza el texto de categoría, título y descripción.
-              5. Reemplaza el div interior del .project-thumb por:
-                  <img src="img/nombre-imagen.jpg" alt="Nombre proyecto" style="width:100%;height:100%;object-fit:cover">
-            ─────────────────────────────────────────────────────────
-        -->
-        <div class="portfolio-full-grid">
+  <!-- PORTAFOLIO COMPLETO CON FILTROS -->
+  <section class="portfolio-full">
+    <div class="container">
 
-          <!-- PStrikebox -->
-          <div class="project-card" data-category="landing-page">
-            <div class="project-thumb">
-              <img
-                src="/assets/img/logo-strikebox.png"
-                alt="Strikebox"
-                style="width:100%;height:100%;object-fit:cover"
-              />
-            </div>
-            <div class="project-info">
-              <span class="project-tag">Landing Page</span>
-              <h3>Strikebox</h3>
-              <p>Landing de alto impacto para dojo de artes marciales con sección de planes, contacto, horarios con filtro por día/disciplina y CTA (Call to Action) directo a WhatsApp.</p>
-              <div style="display:flex; align-items:center; gap:.4rem; margin-top:.75rem; padding-top:.75rem; border-top:1px solid #F3F4F6;">
-                <Resultado: style="font-size:.8rem; color:#059669; font-weight:700;">Resultado:</span>
-                <span style="font-size:.8rem; color:#6B7280;">
-                  <!-- Ejemplo: "Lanzado en 7 días. Primera venta en 48 hs." -->
-                  Lanzado en 6 días. Cliente recibió consultas el día del lanzamiento.
-                </span>
-              </div>
-              <a href="https://strikebox.cl" class="project-link">Ver proyecto →</a>
-            </div>
-          </div>
-
-          <!-- Strikeshop -->
-          <div class="project-card" data-category="ecommerce">
-            <div class="project-thumb thumb-grad-2">
-              <img
-                src="/assets/img/logo-strikeshop.png"
-                alt="Strikeshop"
-                style="width:100%;height:100%;object-fit:cover"
-              />
-            </div>
-            <div class="project-info">
-              <span class="project-tag">Catálogo Online</span>
-              <h3>Strikeshop</h3>
-              <p>Catálogo online para tienda de ropa y accesorios de artes marciales con filtro por categorías y CTA directo para concretar ventas por WhatsApp. Tienda de Strikebox.</p>
-              <div style="display:flex; align-items:center; gap:.4rem; margin-top:.75rem; padding-top:.75rem; border-top:1px solid #F3F4F6;">
-                <Resultado: style="font-size:.8rem; color:#059669; font-weight:700;">Resultado:</span>
-                <span style="font-size:.8rem; color:#6B7280;">
-                  Lanzado en 7 días. Incrementó el flujo de clientes en un 150%.
-                </span>
-              </div>
-              <a href="https://strikebox.cl/strikeshop" class="project-link">Ver proyecto →</a>
-            </div>
-          </div>
-
-          <!-- Legend Factory -->
-          <div class="project-card" data-category="landing-page">
-            <div class="project-thumb thumb-grad-3">
-              <img
-                src="/assets/img/logo-legendfactory.png"
-                alt="Legend Factory"
-                style="width:100%;height:100%;object-fit:cover"
-              />
-            </div>
-            <div class="project-info">
-              <span class="project-tag">Landing Page</span>
-              <h3>Legend Factory</h3>
-              <p>Landing page para Torneo de deportes de contacto. Con links directos para venta de entradas y formulario de inscripción para atletas y contacto con organizadores.</p>
-              <div style="display:flex; align-items:center; gap:.4rem; margin-top:.75rem; padding-top:.75rem; border-top:1px solid #F3F4F6;">
-                <Resultado: style="font-size:.8rem; color:#059669; font-weight:700;">Resultado:</span>
-                <span style="font-size:.8rem; color:#6B7280;">
-                  Lanzado en 5 días. Aumento del alcance del torneo en menos de 48hrs.
-                </span>
-              </div>
-              <a href="https://strikebox.cl/legendfactory" class="project-link">Ver proyecto →</a>
-            </div>
-          </div>
-
-          <!-- Hidrovulk -->
-          <div class="project-card" data-category="landing-page">
-            <div class="project-thumb thumb-grad-4">
-              <img
-                src="/assets/img/logo-hidrovulk.png"
-                alt="Hidrovulk"
-                style="width:100%;height:100%;object-fit:cover"
-              />
-            </div>
-            <div class="project-info">
-              <span class="project-tag">Landing Page</span>
-              <h3>Hidrovulk</h3>
-              <p>Landing page para empresa de servicios de grúa y vulcanización, tanto en taller como en ruta. Con CTA claro y botones directos a WhatsApp.</p>
-              <div style="display:flex; align-items:center; gap:.4rem; margin-top:.75rem; padding-top:.75rem; border-top:1px solid #F3F4F6;">
-                <Resultado: style="font-size:.8rem; color:#059669; font-weight:700;">Resultado:</span>
-                <span style="font-size:.8rem; color:#6B7280;">
-                  Lanzado en 5 días. Incrementó las interacciones en whatsapp en un 130%.
-                </span>
-              </div>
-              <a href="https://hidrovulk.netlify.app" class="project-link">Ver proyecto →</a>
-            </div>
-          </div>
-
-          <!-- Death Zine -->
-          <div class="project-card" data-category="web-institucional">
-            <div class="project-thumb thumb-grad-5">
-              <img
-                src="/assets/img/logo-deathzine.png"
-                alt="Death Zine"
-                style="width:100%;height:100%;object-fit:cover"
-              />
-            </div>
-            <div class="project-info">
-              <span class="project-tag">Web Institucional</span>
-              <h3>Death Zine</h3>
-              <p>Portal web para revista de difusión y reseñas de conciertos y bandas de rock/metal.</p>
-              <div style="position:absolute; top:12px; right:12px; z-index:2; background:#FFD100; color:#111827; font-size:.7rem; font-weight:800; padding:.3rem .7rem; border-radius:999px; letter-spacing:.05em;">
-                EN DESARROLLO
-              </div>
-              <a href="" class="project-link"></a>
-            </div>
-          </div>
-
-        </div><!-- /portfolio-full-grid -->
-
+      <div class="filter-bar" role="group" aria-label="Filtrar proyectos">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="landing-page">Landing Page</button>
+        <button class="filter-btn" data-filter="web-institucional">Web Institucional</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="reservas">Sitio de Reservas</button>
       </div>
-    </section>
 
+      <div class="portfolio-full-grid">
 
-    <!-- ============================================================
-        CTA FINAL
-        ============================================================ -->
-    <section style="padding:5rem 0; background:#F8F9FB;">
-      <div class="container">
-        <div class="cta-banner">
-          <h2>¿Tu proyecto podría ser el próximo?</h2>
-          <p>Cotiza sin compromiso y cuéntanos tu idea. Estamos listos para ayudarte.</p>
-          <div class="cta-actions">
-            <a href="index.html#contacto" class="btn btn-primary">Cotizar ahora →</a>
-            <a href="servicios.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3)">Ver servicios</a>
+        <!-- Strikebox -->
+        <div class="project-card" data-category="landing-page">
+          <div class="project-thumb thumb-grad-1">
+            <img src="assets/img/logo-strikebox.png" alt="Strikebox" />
           </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-        FOOTER
-        ============================================================ -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <h2>Human <span>Web</span> Design</h2>
-            <p>Diseñando páginas web pensadas para vender y posicionarse en lo más alto.</p>
-          </div>
-
-          <div class="footer-col">
-            <h3>Servicios</h3>
-            <ul>
-              <li><a href="servicios.html">Landing Page</a></li>
-              <li><a href="servicios.html">Web Institucional</a></li>
-              <li><a href="servicios.html">E-Commerce</a></li>
-              <li><a href="servicios.html">Sitios de Reservas</a></li>
-              <li><a href="servicios.html">Consultoría Web</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h3>Contacto</h3>
-            <address>
-              <p>Concepción, Chile</p>
-              <p style="margin-top:.5rem"><a href="mailto:human.desarrolloweb@gmail.com">human.desarrolloweb@gmail.com</a></p>
-              <p style="margin-top:.5rem"><a href="https://www.instagram.com/humanwebdesign/" target="_blank" rel="noopener">Instagram</a></p>
-              <p style="margin-top:.5rem"><a href="https://wa.me/56973410591" target="_blank" rel="noopener">WhatsApp</a></p>
-            </address>
+          <div class="project-info">
+            <span class="project-tag">Landing Page</span>
+            <h3>Strikebox</h3>
+            <p>Landing de alto impacto para dojo de artes marciales con sección de planes, contacto, horarios con filtro por día/disciplina y CTA directo a WhatsApp.</p>
+            <div class="project-result">
+              <strong>Resultado:</strong>
+              <span>Lanzado en 6 días. Cliente recibió consultas el día del lanzamiento.</span>
+            </div>
+            <a href="https://strikebox.cl" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p>Copyright © 2026 Todos los derechos reservados. | Powered By Human Web Design</p>
-          <a href="privacidad.html">Términos, condiciones y políticas de privacidad</a>
+        <!-- Strikeshop -->
+        <div class="project-card" data-category="ecommerce">
+          <div class="project-thumb thumb-grad-2">
+            <img src="assets/img/logo-strikeshop.png" alt="Strikeshop" />
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Catálogo Online</span>
+            <h3>Strikeshop</h3>
+            <p>Catálogo online para tienda de ropa y accesorios de artes marciales con filtro por categorías y CTA directo para concretar ventas por WhatsApp.</p>
+            <div class="project-result">
+              <strong>Resultado:</strong>
+              <span>Lanzado en 7 días. Incrementó el flujo de clientes en un 150%.</span>
+            </div>
+            <a href="https://strikebox.cl/strikeshop" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
+          </div>
+        </div>
+
+        <!-- Legend Factory -->
+        <div class="project-card" data-category="landing-page">
+          <div class="project-thumb thumb-grad-3">
+            <img src="assets/img/logo-legendfactory.png" alt="Legend Factory" />
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Landing Page</span>
+            <h3>Legend Factory</h3>
+            <p>Landing page para torneo de deportes de contacto con links de venta de entradas y formulario de inscripción para atletas.</p>
+            <div class="project-result">
+              <strong>Resultado:</strong>
+              <span>Lanzado en 5 días. Aumento del alcance del torneo en menos de 48 hrs.</span>
+            </div>
+            <a href="https://strikebox.cl/legendfactory" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
+          </div>
+        </div>
+
+        <!-- Hidrovulk -->
+        <div class="project-card" data-category="landing-page">
+          <div class="project-thumb thumb-grad-4">
+            <img src="assets/img/logo-hidrovulk.png" alt="Hidrovulk" />
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Landing Page</span>
+            <h3>Hidrovulk</h3>
+            <p>Landing page para empresa de servicios de grúa y vulcanización, tanto en taller como en ruta. Con CTA claro y botones directos a WhatsApp.</p>
+            <div class="project-result">
+              <strong>Resultado:</strong>
+              <span>Lanzado en 5 días. Incrementó las interacciones en WhatsApp en un 130%.</span>
+            </div>
+            <a href="https://hidrovulk.netlify.app" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
+          </div>
+        </div>
+
+        <!-- Death Zine -->
+        <div class="project-card" data-category="web-institucional">
+          <div class="project-thumb thumb-grad-5">
+            <img src="assets/img/logo-deathzine.png" alt="Death Zine" />
+          </div>
+          <div class="project-info">
+            <span class="badge-wip">En desarrollo</span>
+            <span class="project-tag">Web Institucional</span>
+            <h3>Death Zine</h3>
+            <p>Portal web para revista de difusión y reseñas de conciertos y bandas de rock/metal.</p>
+          </div>
+        </div>
+
+      </div><!-- /portfolio-full-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- CTA FINAL -->
+  <section style="padding:5rem 0; background:#F8F9FB;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>¿Tu proyecto podría ser el próximo?</h2>
+        <p>Cotiza sin compromiso y cuéntanos tu idea. Estamos listos para ayudarte.</p>
+        <div class="cta-actions">
+          <a href="index.html#contacto" class="btn btn-primary">Cotizar ahora →</a>
+          <a href="servicios.html" class="btn btn-ghost">Ver servicios</a>
         </div>
       </div>
+    </div>
+  </section>
 
-    </footer>
 
-    <a href="https://wa.me/56973410591?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20web."
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Human <span>Web</span> Design</h2>
+          <p>Diseñando páginas web pensadas para vender y posicionarse en lo más alto.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/humanwebdesign/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://wa.me/56973410591" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="servicios.html">Landing Page</a></li>
+            <li><a href="servicios.html">Web Institucional</a></li>
+            <li><a href="servicios.html">E-Commerce</a></li>
+            <li><a href="servicios.html">Sitios de Reservas</a></li>
+            <li><a href="servicios.html">Consultoría Web</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <address>
+            <p>Concepción, Chile</p>
+            <p><a href="mailto:human.desarrolloweb@gmail.com">human.desarrolloweb@gmail.com</a></p>
+            <p><a href="https://www.instagram.com/humanwebdesign/" target="_blank" rel="noopener">Instagram</a></p>
+            <p><a href="https://wa.me/56973410591" target="_blank" rel="noopener">WhatsApp</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Human Web Design. Todos los derechos reservados.</p>
+        <a href="privacidad.html">Términos, condiciones y privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    href="https://wa.me/56973410591?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20web."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contactar por WhatsApp"
-    style="
-        position: fixed;
-        bottom: 1.75rem;
-        right: 1.75rem;
-        z-index: 999;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: #25D366;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 20px rgba(37,211,102,.4);
-        transition: transform .2s, box-shadow .2s;
-    "
-    onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,.55)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,.4)'"
-    >
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    class="whatsapp-btn"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#ffffff">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
-    </a>
+  </a>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>

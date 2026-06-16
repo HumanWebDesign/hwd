@@ -24,49 +24,45 @@ async function insertToSupabase(data) {
     },
     body: JSON.stringify(data),
   });
-
+ 
   if (!response.ok) {
     const err = await response.json().catch(() => ({}));
     throw new Error(err.message || `Error ${response.status}`);
   }
-
+ 
   return true;
 }
-
+ 
 /* ============================================================
    FORMULARIO DE CONTACTO
    ============================================================ */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-
+ 
   const statusEl = document.getElementById('form-status');
-
+ 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
+ 
     const submitBtn = form.querySelector('[type="submit"]');
-
-    // Datos del formulario
+ 
     const payload = {
-      nombre_empresa:    form.nombre_empresa.value.trim(),
-      correo:            form.correo.value.trim(),
-      telefono:          form.telefono.value.trim(),
-      tipo_proyecto:     form.tipo_proyecto.value,
-      mensaje:           form.mensaje.value.trim(),
-      fecha_envio:       new Date().toISOString(),
+      nombre_empresa: form.nombre_empresa.value.trim(),
+      correo:         form.correo.value.trim(),
+      telefono:       form.telefono.value.trim(),
+      tipo_proyecto:  form.tipo_proyecto.value,
+      mensaje:        form.mensaje.value.trim(),
+      fecha_envio:    new Date().toISOString(),
     };
-
-    // UI: loading
+ 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando…';
     statusEl.className = 'loading';
     statusEl.textContent = 'Enviando tu mensaje, por favor espera…';
-
+ 
     try {
       await insertToSupabase(payload);
-
-      // Éxito
       statusEl.className = 'success';
       statusEl.textContent = '✅ ¡Mensaje enviado! Te contactaremos pronto.';
       form.reset();
@@ -80,27 +76,27 @@ function initContactForm() {
     }
   });
 }
-
+ 
 /* ============================================================
    FAQ ACORDEÓN
    ============================================================ */
 function initFAQ() {
   const items = document.querySelectorAll('.faq-item');
   if (!items.length) return;
-
+ 
   items.forEach((item) => {
     const question = item.querySelector('.faq-question');
     const answer   = item.querySelector('.faq-answer');
-
+ 
     question.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
-
+ 
       // Cierra todos
       items.forEach((i) => {
         i.classList.remove('open');
         i.querySelector('.faq-answer').style.maxHeight = null;
       });
-
+ 
       // Abre el seleccionado si estaba cerrado
       if (!isOpen) {
         item.classList.add('open');
@@ -109,29 +105,26 @@ function initFAQ() {
     });
   });
 }
-
+ 
 /* ============================================================
    FILTRO DE PORTAFOLIO
    ============================================================ */
 function initPortfolioFilter() {
   const filterBar = document.querySelector('.filter-bar');
   if (!filterBar) return;
-
+ 
   const buttons = filterBar.querySelectorAll('.filter-btn');
   const cards   = document.querySelectorAll('.portfolio-full-grid .project-card');
-
+ 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      // Estado activo del botón
       buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-
+ 
       const filter = btn.dataset.filter;
-
+ 
       cards.forEach((card) => {
-        const category = card.dataset.category;
-
-        if (filter === 'todos' || category === filter) {
+        if (filter === 'todos' || card.dataset.category === filter) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
@@ -140,7 +133,7 @@ function initPortfolioFilter() {
     });
   });
 }
-
+ 
 /* ============================================================
    MENÚ MÓVIL
    ============================================================ */
@@ -148,14 +141,14 @@ function initMobileMenu() {
   const hamburger  = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
   if (!hamburger || !mobileMenu) return;
-
+ 
   let open = false;
-
-  hamburger.addEventListener('click', () => {
-    open = !open;
+ 
+  const toggleMenu = (force) => {
+    open = force !== undefined ? force : !open;
     mobileMenu.style.display = open ? 'flex' : 'none';
-
-    // Animación hamburger → X
+    hamburger.setAttribute('aria-expanded', String(open));
+ 
     const spans = hamburger.querySelectorAll('span');
     if (open) {
       spans[0].style.transform = 'translateY(7px) rotate(45deg)';
@@ -164,28 +157,30 @@ function initMobileMenu() {
     } else {
       spans.forEach((s) => { s.style.transform = ''; s.style.opacity = ''; });
     }
-  });
-
+  };
+ 
+  hamburger.addEventListener('click', () => toggleMenu());
+ 
   // Cierra al hacer clic en un enlace
   mobileMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      open = false;
-      mobileMenu.style.display = 'none';
-      hamburger.querySelectorAll('span').forEach((s) => {
-        s.style.transform = '';
-        s.style.opacity   = '';
-      });
-    });
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+ 
+  // Cierra al hacer clic fuera del menú
+  document.addEventListener('click', (e) => {
+    if (open && !hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      toggleMenu(false);
+    }
   });
 }
-
+ 
 /* ============================================================
    NAVBAR: marcar enlace activo según la página actual
    ============================================================ */
 function initActiveNav() {
   const path  = window.location.pathname.split('/').pop() || 'index.html';
   const links = document.querySelectorAll('.nav-links a, .mobile-menu a');
-
+ 
   links.forEach((link) => {
     const href = link.getAttribute('href');
     if (href && href === path) {
@@ -193,17 +188,20 @@ function initActiveNav() {
     }
   });
 }
-
+ 
 /* ============================================================
    ANIMACIONES ON SCROLL (Intersection Observer)
    ============================================================ */
 function initScrollAnimations() {
   const targets = document.querySelectorAll(
-    '.service-card, .project-card, .service-detail-card, .faq-item, .ceo-card'
+    '.service-card, .project-card, .service-detail-card, .faq-item, .ceo-card, .testimonial-card'
   );
-
+ 
   if (!targets.length || !('IntersectionObserver' in window)) return;
-
+ 
+  // Respeta preferencia de movimiento reducido
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -215,10 +213,10 @@ function initScrollAnimations() {
     },
     { threshold: 0.1 }
   );
-
+ 
   targets.forEach((el) => observer.observe(el));
 }
-
+ 
 /* ============================================================
    INIT
    ============================================================ */
