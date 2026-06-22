@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Términos, Condiciones y Política de Privacidad — Human Web Design</title>
-  <meta name="description" content="Términos y condiciones de uso y política de privacidad de Human Web Design, agencia de diseño web en Chile." />
+  <title>Política de Privacidad y Ley 21.719 | Human Web Design</title>
+  <meta name="description" content="Términos, condiciones y política de privacidad de Human Web Design, adaptada a la Ley N° 21.719 sobre protección de datos personales en Chile." />
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="canonical" href="https://humanwebdesign.cl/privacidad.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500\&family=Inter:wght@400;500;600;700;800\&family=JetBrains+Mono:wght@500\&display=swap" rel="stylesheet" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260622-faqslow" />
 
   <style>
     .legal-wrap {
       max-width: 820px;
       margin-inline: auto;
-      padding: 4rem 1.25rem 6rem;
+      padding: var(--space-section) 1.25rem;
     }
 
     .legal-header {
@@ -76,10 +75,8 @@
       transition: opacity .2s;
     }
 
-    .legal-toc li a:hover { opacity: .75; }
-
     .legal-section {
-      margin-bottom: 3rem;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
       scroll-margin-top: 90px;
     }
 
@@ -87,7 +84,7 @@
       display: flex;
       align-items: center;
       gap: .75rem;
-      font-size: 1.2rem;
+      font-size: clamp(1.08rem, 1rem + .45vw, 1.35rem);
       font-weight: 800;
       color: var(--dark);
       margin-bottom: 1.1rem;
@@ -111,7 +108,7 @@
 
     .legal-section p {
       color: #374151;
-      font-size: .97rem;
+      font-size: clamp(.95rem, .92rem + .12vw, 1rem);
       line-height: 1.8;
       margin-bottom: .9rem;
     }
@@ -130,7 +127,7 @@
       align-items: flex-start;
       gap: .6rem;
       color: #374151;
-      font-size: .97rem;
+      font-size: clamp(.95rem, .92rem + .12vw, 1rem);
       line-height: 1.65;
     }
 
@@ -143,7 +140,7 @@
     }
 
     .legal-highlight {
-      background: #FFF0F8;
+      background: var(--gold-dim);
       border-left: 3px solid var(--magenta);
       border-radius: 0 var(--radius) var(--radius) 0;
       padding: 1rem 1.25rem;
@@ -180,12 +177,15 @@
     .legal-contact-box p { font-size: .93rem; margin-bottom: 1.25rem; }
 
     .legal-contact-box a {
-      color: var(--cyan);
+      color: var(--magenta);
       font-weight: 600;
       transition: opacity .2s;
     }
 
-    .legal-contact-box a:hover { opacity: .8; }
+    @media (hover: hover) and (pointer: fine) {
+      .legal-toc li a:hover,
+      .legal-contact-box a:hover { opacity: .78; }
+    }
 
     @media (max-width: 600px) {
       .legal-toc ol { grid-template-columns: 1fr; }
@@ -199,37 +199,34 @@
        NAVBAR
        ============================================================ -->
   <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo" style="display:flex; align-items:center; gap:.5rem;">
-            <img src="assets/img/logo.png" alt="" style="height:40px; width:40px; object-fit:contain;" />
+        <div class="container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/img/logo.webp" alt="Human Web Design" width="256" height="256" decoding="async" />
             Human <span>Web</span> Design
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="index.html#nosotros">Nosotros</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
+        </a>
 
-      <div class="nav-cta">
-        <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
-      </div>
+        <nav class="nav-links" aria-label="Navegación principal">
+            <a href="servicios.html">Servicios</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
 
-      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+        <div class="nav-cta">
+            <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
+        </div>
 
-    <nav class="mobile-menu" style="display:none">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="portafolio.html">Portafolio</a>
-      <a href="index.html#nosotros">Nosotros</a>
-      <a href="index.html#contacto">Contacto</a>
-      <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
-    </nav>
-  </header>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        </div>
+
+        <nav class="mobile-menu" aria-label="Menú móvil">
+            <a href="servicios.html">Servicios</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
+        </nav>
+    </header>
 
 
   <!-- ============================================================
@@ -243,7 +240,7 @@
         <span class="section-label">Documentos legales</span>
         <h1>Términos, Condiciones y<br>Política de Privacidad</h1>
         <!-- Actualiza esta fecha cuando modifiques el documento -->
-        <p>Última actualización: junio de 2026 · Válido para humanwebdesign.cl</p>
+        <p>Última actualización: <time datetime="2026-06-22">22 de junio de 2026</time> · Válido para humanwebdesign.cl</p>
       </div>
 
       <!-- Índice -->
@@ -256,9 +253,11 @@
           <li><a href="#propiedad">Propiedad intelectual</a></li>
           <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
           <li><a href="#privacidad">Política de Privacidad</a></li>
-          <li><a href="#datos-recopilados">Datos que recopilamos</a></li>
-          <li><a href="#uso-datos">Uso de los datos</a></li>
-          <li><a href="#derechos">Tus derechos</a></li>
+          <li><a href="#responsable-datos">Responsable del tratamiento</a></li>
+          <li><a href="#datos-recopilados">Datos, fines y base legal</a></li>
+          <li><a href="#seguridad-conservacion">Seguridad y conservación</a></li>
+          <li><a href="#derechos">Derechos ARCO y portabilidad</a></li>
+          <li><a href="#ejercicio-derechos">Cómo ejercer tus derechos</a></li>
           <li><a href="#contacto-legal">Contacto</a></li>
         </ol>
       </div>
@@ -407,118 +406,164 @@
       <section class="legal-section" id="privacidad">
         <h2 class="legal-section-title">
           <span class="num">II</span>
-          Política de Privacidad
+          Política de Privacidad y Protección de Datos
         </h2>
         <p>
-          En Human Web Design nos tomamos en serio la privacidad de las personas que
-          nos contactan. Esta Política de Privacidad describe qué información personal
-          recopilamos a través de este Sitio, para qué la usamos y cómo la protegemos,
-          en cumplimiento de la <strong>Ley N° 19.628 sobre Protección de la Vida
-          Privada</strong> de Chile.
+          Esta política explica cómo Human Web Design recopila, utiliza, conserva y
+          protege los datos personales enviados mediante humanwebdesign.cl. Se aplica
+          la Ley N° 19.628 sobre Protección de la Vida Privada y su reforma introducida
+          por la <strong>Ley N° 21.719</strong>, publicada el 13 de diciembre de 2024 y
+          con entrada en vigencia el 1 de diciembre de 2026. Human Web Design adopta
+          desde ahora sus estándares de licitud, finalidad, proporcionalidad,
+          transparencia, seguridad, confidencialidad y responsabilidad.
         </p>
         <div class="legal-highlight">
-          <strong>Nuestro compromiso:</strong> Recopilamos únicamente los datos
-          estrictamente necesarios para responder a tu consulta o cotización.
-          No vendemos, cedemos ni compartimos tu información personal con terceros
-          con fines comerciales.
+          <strong>Resumen:</strong> solo tratamos los datos necesarios para responder
+          solicitudes de contacto o cotización. No vendemos datos personales, no los
+          usamos para publicidad no solicitada y no realizamos decisiones automatizadas
+          ni elaboración de perfiles.
         </div>
+      </section>
+
+      <section class="legal-section" id="responsable-datos">
+        <h2 class="legal-section-title">
+          <span class="num">5</span>
+          Responsable del Tratamiento
+        </h2>
+        <p>
+          El responsable del tratamiento es <strong>Human Web Design</strong>, agencia
+          de diseño y desarrollo web con domicilio en Concepción, Región del Biobío,
+          Chile. El canal oficial para consultas de privacidad y ejercicio de derechos es
+          <a href="mailto:human.desarrolloweb@gmail.com" class="legal-email-link">human.desarrolloweb@gmail.com</a>.
+        </p>
+        <p>
+          Human Web Design determina los fines y medios del tratamiento descrito en esta
+          política y responde por el cumplimiento de sus obligaciones. Supabase actúa
+          como proveedor tecnológico encargado del almacenamiento de la información,
+          sujeto a las instrucciones y controles definidos por la Agencia.
+        </p>
       </section>
 
       <section class="legal-section" id="datos-recopilados">
         <h2 class="legal-section-title">
-          <span class="num">5</span>
-          Datos que Recopilamos
+          <span class="num">6</span>
+          Datos, Finalidades y Base Legal
         </h2>
         <p>
-          El único mecanismo de recopilación de datos personales en este Sitio es el
-          <strong>formulario de contacto</strong>. Al completarlo y enviarlo, el usuario
-          nos entrega voluntariamente la siguiente información:
+          Mediante el formulario de contacto recopilamos los datos que la persona entrega
+          directamente: nombre o empresa, correo electrónico, teléfono opcional, tipo de
+          proyecto, mensaje y fecha y hora de envío. No solicitamos categorías sensibles
+          de datos; pedimos no incluirlas en el campo de mensaje.
         </p>
         <ul>
-          <li><strong>Nombre o nombre de la empresa:</strong> para identificar al solicitante.</li>
-          <li><strong>Correo electrónico:</strong> para enviar la respuesta o cotización.</li>
-          <li><strong>Número de teléfono</strong> (opcional): para comunicación directa si el usuario lo autoriza.</li>
-          <li><strong>Tipo de proyecto a cotizar:</strong> para orientar la respuesta correctamente.</li>
-          <li><strong>Mensaje:</strong> descripción libre de la consulta o proyecto.</li>
+          <li>Responder consultas y solicitudes de cotización.</li>
+          <li>Preparar una propuesta y realizar gestiones precontractuales solicitadas.</li>
+          <li>Dar seguimiento a la conversación comercial iniciada por la persona.</li>
+          <li>Coordinar un proyecto cuando la persona decide contratar los servicios.</li>
         </ul>
         <p>
-          Adicionalmente, como dato técnico no personal, se registra la
-          <strong>fecha y hora exacta del envío</strong> del formulario.
+          La base jurídica para enviar el formulario es el <strong>consentimiento previo,
+          libre, informado, específico e inequívoco</strong>, expresado mediante la casilla
+          obligatoria que acompaña al botón de envío. Human Web Design debe poder acreditar
+          ese consentimiento. La persona puede revocarlo en cualquier momento por el mismo
+          canal indicado en esta política, sin efecto retroactivo sobre tratamientos lícitos
+          ya realizados.
         </p>
         <p>
-          Este Sitio <strong>no utiliza cookies de seguimiento</strong>, no instala
-          píxeles publicitarios de terceros y no recopila datos de navegación con fines
-          analíticos ni comerciales.
+          Si una conversación deriva en una relación contractual, determinados tratamientos
+          posteriores podrán fundarse además en la ejecución del contrato y en obligaciones
+          legales aplicables. Los datos no se reutilizarán para finalidades incompatibles sin
+          informar y obtener una nueva base de licitud cuando corresponda.
+        </p>
+        <p>
+          Este sitio no utiliza cookies de seguimiento, píxeles publicitarios ni analítica
+          comercial. Los datos solo se comunican a proveedores indispensables para prestar
+          el servicio, como Supabase, o a autoridades cuando una norma legal lo exija.
         </p>
       </section>
 
-      <section class="legal-section" id="uso-datos">
+      <section class="legal-section" id="seguridad-conservacion">
         <h2 class="legal-section-title">
-          <span class="num">6</span>
-          Uso de los Datos Personales
+          <span class="num">7</span>
+          Seguridad, Almacenamiento y Conservación
         </h2>
         <p>
-          Los datos recopilados a través del formulario de contacto se utilizan
-          <strong>exclusivamente</strong> para:
-        </p>
-        <ul>
-          <li>Responder a la consulta o solicitud de cotización enviada por el usuario.</li>
-          <li>Hacer seguimiento de la conversación comercial iniciada por el propio usuario.</li>
-          <li>Coordinar los detalles del proyecto en caso de que el usuario decida contratar nuestros servicios.</li>
-        </ul>
-        <div class="legal-highlight">
-          <strong>Lo que NO hacemos con tus datos:</strong> No los vendemos, no los
-          cedemos a terceros, no los usamos para enviar publicidad no solicitada
-          (spam), no los usamos para perfilado comercial ni para ningún fin distinto
-          al de contactarte en relación con tu consulta.
-        </div>
-        <p>
-          Los datos se almacenan de forma segura en <strong>Supabase</strong>,
-          plataforma de base de datos con cifrado en tránsito (TLS) y en reposo,
-          con servidores ubicados en Sudamérica. El acceso a estos datos está
-          restringido únicamente al equipo de Human Web Design.
+          Los registros del formulario se almacenan en Supabase. Human Web Design aplica
+          medidas técnicas y organizativas proporcionales al riesgo, incluyendo conexión
+          HTTPS y cifrado TLS en tránsito, cifrado en reposo provisto por la infraestructura,
+          control de acceso con privilegio mínimo y <strong>Row Level Security (RLS)</strong>.
+          Las políticas RLS permiten al rol público únicamente insertar solicitudes y
+          bloquean la lectura, modificación o eliminación pública de la tabla de contactos.
         </p>
         <p>
-          La información se conserva por un período máximo de <strong>24 meses</strong>
-          desde el último contacto, salvo que el usuario solicite su eliminación antes.
+          También se mantienen credenciales de administración separadas de la clave pública,
+          revisión de accesos y actualización de dependencias y configuraciones. Aunque se
+          aplican medidas razonables, ningún sistema conectado a Internet elimina por completo
+          el riesgo. Ante un incidente se aplicarán los deberes de evaluación, mitigación y
+          notificación exigibles.
+        </p>
+        <p>
+          Las consultas que no deriven en contrato se conservarán por un máximo de
+          <strong>24 meses desde el último contacto</strong>. Cumplido ese plazo, o antes si
+          procede una solicitud de supresión, serán eliminadas o anonimizadas de forma segura.
+          Si existe una relación contractual, se conservarán únicamente los antecedentes
+          necesarios durante los plazos legales, tributarios o de defensa de reclamaciones
+          aplicables y luego serán suprimidos o anonimizados.
         </p>
       </section>
 
       <section class="legal-section" id="derechos">
         <h2 class="legal-section-title">
-          <span class="num">7</span>
-          Tus Derechos sobre tus Datos
+          <span class="num">8</span>
+          Derechos ARCO, Supresión y Portabilidad
         </h2>
         <p>
-          De acuerdo con la Ley N° 19.628 y sus modificaciones, tienes derecho a:
+          Toda persona titular puede ejercer gratuitamente los derechos reconocidos por la
+          Ley N° 21.719. La expresión ARCO se utiliza aquí incluyendo la
+          <strong>cancelación como supresión</strong>, término empleado por la ley chilena:
         </p>
         <ul>
-          <li>
-            <strong>Acceder</strong> a los datos personales que tenemos registrados
-            sobre ti.
-          </li>
-          <li>
-            <strong>Rectificar</strong> cualquier dato incorrecto o desactualizado.
-          </li>
-          <li>
-            <strong>Eliminar</strong> (suprimir) tus datos de nuestra base de datos,
-            siempre que no exista una razón legal o contractual para conservarlos.
-          </li>
-          <li>
-            <strong>Oponerte</strong> al tratamiento de tus datos en cualquier momento.
-          </li>
+          <li><strong>Acceso:</strong> conocer qué datos se tratan, su origen, finalidad, destinatarios y período de conservación.</li>
+          <li><strong>Rectificación:</strong> corregir datos inexactos, incompletos o desactualizados.</li>
+          <li><strong>Cancelación/supresión:</strong>solicitar la eliminación cuando los datos carezcan de fundamento legal, estén caducos o ya no sean necesarios.</li>
+          <li><strong>Oposición:</strong> pedir que cese un tratamiento en los casos previstos por la ley.</li>
+          <li><strong>Portabilidad:</strong> recibir los datos facilitados en un formato estructurado, genérico y de uso común, y pedir su transmisión a otro responsable cuando sea técnicamente factible.</li>
+          <li><strong>Bloqueo:</strong> solicitar la suspensión temporal de operaciones de tratamiento mientras se verifica su exactitud o la procedencia de otro derecho.</li>
         </ul>
+      </section>
+
+      <section class="legal-section" id="ejercicio-derechos">
+        <h2 class="legal-section-title">
+          <span class="num">9</span>
+          Cómo Ejercer tus Derechos
+        </h2>
         <p>
-          Para ejercer cualquiera de estos derechos, basta con enviar un correo a
-          <a href="mailto:human.desarrolloweb@gmail.com" style="color:var(--magenta);font-weight:600">human.desarrolloweb@gmail.com</a>
-          indicando tu nombre y la solicitud específica. Responderemos en un plazo
-          máximo de <strong>10 días hábiles</strong>.
+          Envía un correo con el asunto <strong>“Solicitud de derechos Ley 21.719”</strong> a
+          <a href="mailto:human.desarrolloweb@gmail.com" class="legal-email-link">human.desarrolloweb@gmail.com</a>
+          e incluye: nombre completo; correo usado en el formulario; derecho que deseas
+          ejercer; datos o tratamiento al que se refiere la solicitud; explicación clara
+          de lo pedido; y un correo para recibir la respuesta. Para rectificar, indica el
+          dato correcto; para suprimir u oponerte, explica el fundamento cuando corresponda.
+        </p>
+        <p>
+          Podremos solicitar antecedentes razonables para verificar identidad, evitando
+          recopilar información excesiva. Acusaremos recibo y responderemos dentro de
+          <strong>30 días corridos</strong>; el plazo puede prorrogarse una sola vez por
+          otros 30 días corridos cuando existan circunstancias justificadas, informándolo
+          antes del vencimiento. El acceso es gratuito al menos trimestralmente y los
+          derechos de rectificación, supresión y oposición son gratuitos.
+        </p>
+        <p>
+          Si la solicitud es rechazada total o parcialmente, se informará el motivo y los
+          mecanismos de reclamación disponibles. Desde la entrada en vigencia de la Ley
+          N° 21.719, la persona podrá recurrir ante la Agencia de Protección de Datos
+          Personales conforme al procedimiento legal.
         </p>
       </section>
 
       <section class="legal-section" id="menores">
         <h2 class="legal-section-title">
-          <span class="num">8</span>
+          <span class="num">10</span>
           Menores de Edad
         </h2>
         <p>
@@ -532,21 +577,21 @@
 
       <section class="legal-section" id="cambios-privacidad">
         <h2 class="legal-section-title">
-          <span class="num">9</span>
+          <span class="num">11</span>
           Cambios en esta Política
         </h2>
         <p>
           Human Web Design puede actualizar esta Política de Privacidad cuando sea
           necesario para reflejar cambios en sus prácticas o en la legislación vigente.
           Cualquier modificación será publicada en esta misma página con una nueva
-          fecha de actualización. El uso continuado del Sitio tras dichos cambios
-          implica la aceptación de la versión actualizada.
+          fecha de actualización. Si el cambio introduce una nueva finalidad que requiera
+          consentimiento, se solicitará una autorización nueva antes de aplicarla.
         </p>
       </section>
 
       <section class="legal-section" id="ley-aplicable">
         <h2 class="legal-section-title">
-          <span class="num">10</span>
+          <span class="num">12</span>
           Ley Aplicable y Jurisdicción
         </h2>
         <p>
@@ -568,7 +613,7 @@
           <p>
             <a href="mailto:human.desarrolloweb@gmail.com">human.desarrolloweb@gmail.com</a>
           </p>
-          <a href="index.html" class="btn btn-primary" style="margin-top:.5rem">Volver al inicio</a>
+          <a href="index.html" class="btn btn-primary legal-back-link">Volver al inicio</a>
         </div>
       </section>
 
@@ -619,29 +664,13 @@
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contactar por WhatsApp"
-    style="
-        position: fixed;
-        bottom: 1.75rem;
-        right: 1.75rem;
-        z-index: 999;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: #25D366;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 20px rgba(37,211,102,.4);
-        transition: transform .2s, box-shadow .2s;
-    "
-    onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,.55)'"
-    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,.4)'"
+    class="whatsapp-btn"
     >
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
     </a>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260622-faqslow" defer></script>
 </body>
 </html>

@@ -41,10 +41,29 @@ function initContactForm() {
   if (!form) return;
  
   const statusEl = document.getElementById('form-status');
+  const consentInput = form.elements.namedItem('consentimiento_privacidad');
+
+  if (consentInput instanceof HTMLInputElement) {
+    consentInput.addEventListener('change', () => {
+      consentInput.setCustomValidity('');
+    });
+  }
  
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
- 
+
+    if (consentInput instanceof HTMLInputElement && !consentInput.checked) {
+      consentInput.setCustomValidity(
+        'Debes aceptar las políticas de privacidad y protección de datos para enviar tu solicitud.'
+      );
+    }
+
+    if (!form.reportValidity()) {
+      statusEl.className = '';
+      statusEl.textContent = '';
+      return;
+    }
+
     const submitBtn = form.querySelector('[type="submit"]');
  
     const payload = {
@@ -57,6 +76,7 @@ function initContactForm() {
     };
  
     submitBtn.disabled = true;
+    submitBtn.setAttribute('aria-busy', 'true');
     submitBtn.textContent = 'Enviando…';
     statusEl.className = 'loading';
     statusEl.textContent = 'Enviando tu mensaje, por favor espera…';
@@ -72,6 +92,7 @@ function initContactForm() {
       statusEl.textContent = '❌ Hubo un error al enviar. Intenta de nuevo o escríbenos directamente.';
     } finally {
       submitBtn.disabled = false;
+      submitBtn.removeAttribute('aria-busy');
       submitBtn.textContent = 'Enviar mensaje';
     }
   });
@@ -83,24 +104,100 @@ function initContactForm() {
 function initFAQ() {
   const items = document.querySelectorAll('.faq-item');
   if (!items.length) return;
- 
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hideTimers = new WeakMap();
+
+  const clearHideTimer = (answer) => {
+    const pendingTimer = hideTimers.get(answer);
+
+    if (pendingTimer) {
+      window.clearTimeout(pendingTimer);
+      hideTimers.delete(answer);
+    }
+  };
+
+  const closeItem = (item, immediate = false) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    clearHideTimer(answer);
+
+    question.setAttribute('aria-expanded', 'false');
+
+    if (immediate || reduceMotion || answer.hidden) {
+      item.classList.remove('open');
+      answer.style.maxHeight = '0px';
+      answer.hidden = true;
+      return;
+    }
+
+    /* Parte desde la altura real antes de animar hacia cero. */
+    answer.style.maxHeight = `${answer.scrollHeight}px`;
+    void answer.offsetHeight;
+
+    item.classList.remove('open');
+    answer.style.maxHeight = '0px';
+
+    const timer = window.setTimeout(() => {
+      if (question.getAttribute('aria-expanded') === 'false') {
+        answer.hidden = true;
+      }
+      hideTimers.delete(answer);
+    }, 600);
+
+    hideTimers.set(answer, timer);
+  };
+
+  const openItem = (item) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    clearHideTimer(answer);
+
+    question.setAttribute('aria-expanded', 'true');
+    answer.hidden = false;
+    answer.style.maxHeight = '0px';
+
+    if (reduceMotion) {
+      item.classList.add('open');
+      answer.style.maxHeight = 'none';
+      return;
+    }
+
+    /* Fuerza el frame colapsado después de retirar hidden. */
+    void answer.offsetHeight;
+
+    item.classList.add('open');
+    answer.style.maxHeight = `${answer.scrollHeight}px`;
+  };
+
   items.forEach((item) => {
     const question = item.querySelector('.faq-question');
-    const answer   = item.querySelector('.faq-answer');
- 
+    const answer = item.querySelector('.faq-answer');
+
+    closeItem(item, true);
+
+    answer.addEventListener('transitionend', (event) => {
+      if (event.target !== answer || event.propertyName !== 'max-height') return;
+
+      clearHideTimer(answer);
+
+      if (question.getAttribute('aria-expanded') === 'false') {
+        answer.hidden = true;
+      } else {
+        /* Permite que contenido y viewport cambien sin quedar recortados. */
+        answer.style.maxHeight = 'none';
+      }
+    });
+
     question.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
- 
-      // Cierra todos
-      items.forEach((i) => {
-        i.classList.remove('open');
-        i.querySelector('.faq-answer').style.maxHeight = null;
-      });
- 
-      // Abre el seleccionado si estaba cerrado
+      const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+      items.forEach((otherItem) => closeItem(otherItem));
+
       if (!isOpen) {
-        item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+        openItem(item);
       }
     });
   });

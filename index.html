@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Human Web Design | Agencia de Diseño y Desarrollo Web</title>
     <meta name="description" content="Agencia de diseño web en Chile especializada en gimnasios y emprendedores. Sitios web premium, landing pages y tiendas online desde Concepción para todo el país." />
-    <meta name="keywords" content="diseño web Chile, página web para gimnasio, web para emprendedores, agencia web Concepción, landing page Chile, tienda online Chile" />
     <meta name="author" content="Human Web Design" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Human Web Design | Agencia de Diseño y Desarrollo Web" />
+    <meta property="og:description" content="Sitios web premium, landing pages y tiendas online para negocios y emprendedores en Chile." />
+    <meta property="og:url" content="https://humanwebdesign.cl/" />
+    <meta property="og:site_name" content="Human Web Design" />
+    <meta property="og:image" content="https://humanwebdesign.cl/assets/img/bg-hero.png" />
+    <meta property="og:image:width" content="1448" />
+    <meta property="og:image:height" content="1086" />
+    <meta property="og:image:alt" content="Espacio de trabajo de Human Web Design" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Human Web Design | Agencia de Diseño y Desarrollo Web" />
+    <meta name="twitter:description" content="Sitios web premium, landing pages y tiendas online para negocios y emprendedores en Chile." />
+    <meta name="twitter:image" content="https://humanwebdesign.cl/assets/img/bg-hero.png" />
+    <meta name="twitter:image:alt" content="Espacio de trabajo de Human Web Design" />
     <link rel="canonical" href="https://humanwebdesign.cl/" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preload" as="image" href="assets/img/bg-hero.png" fetchpriority="high" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500\&family=Inter:wght@400;500;600;700;800\&family=JetBrains+Mono:wght@500\&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260622-faqslow" />
     </head>
 
     <body>
@@ -25,15 +40,13 @@
     <header class="navbar">
         <div class="container">
         <a href="index.html" class="nav-logo">
-            <img src="assets/img/logo.png" alt="Human Web Design" />
+            <img src="assets/img/logo.webp" alt="Human Web Design" width="256" height="256" decoding="async" />
             Human <span>Web</span> Design
         </a>
 
         <nav class="nav-links" aria-label="Navegación principal">
-            <a href="index.html">Inicio</a>
             <a href="servicios.html">Servicios</a>
             <a href="portafolio.html">Portafolio</a>
-            <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
         </nav>
 
@@ -47,63 +60,51 @@
         </div>
 
         <nav class="mobile-menu" aria-label="Menú móvil">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#contacto" class="btn btn-primary">Cotizar proyecto</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#contacto" class="btn btn-primary">Cotizar proyecto</a>
         </nav>
     </header>
 
+    <main id="main-content">
 
     <!-- ============================================================
         HERO
         ============================================================ -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
         <div class="container">
         <div class="hero-content">
 
             <div class="hero-text">
-            <div class="hero-tag">Agencia de Diseño y Desarrollo Web</div>
+                <div class="hero-tag">Agencia de Diseño y Desarrollo Web</div>
 
-            <h1 class="hero-title">
-                Tu negocio merece una web que<br>
-                <span class="accent-m">venda</span> &amp;
-                <span class="accent-c">posicione.</span>
-            </h1>
+                <h1 class="hero-title" id="hero-title">
+                    Tu negocio merece una web que<br>
+                    <span class="accent-m">venda</span> &amp;
+                    <span class="accent-c">posicione.</span>
+                </h1>
 
-            <p class="hero-desc">
-                Diseñamos el sitio web de tu negocio en menos de 2 semanas.
-                Sin plantillas genéricas, sin costos de agencia grande. Solo resultados.
-            </p>
+                <p class="hero-desc">
+                    Diseñamos el sitio web de tu negocio en menos de 2 semanas.
+                    Sin plantillas genéricas, sin costos de agencia grande. Solo resultados.
+                </p>
 
-            <div class="hero-actions">
-                <a href="#contacto" class="btn btn-primary">Cotizar ahora →</a>
-                <a href="portafolio.html" class="btn btn-outline">Ver portafolio</a>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat-item">
-                <span class="stat-num">4</span>
-                <span class="stat-label">Proyectos Lanzados</span>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-primary">Cotizar ahora →</a>
+                    <a href="portafolio.html" class="btn btn-outline">Ver portafolio</a>
                 </div>
-                <div class="stat-item">
-                <span class="stat-num">3</span>
-                <span class="stat-label">Clientes Activos</span>
-                </div>
-                <div class="stat-item">
-                <span class="stat-num"><span>2026</span></span>
-                <span class="stat-label">Fundada con Propósito</span>
-                </div>
-            </div>
-            </div>
 
-            <div class="hero-visual">
-            <img
-                src="assets/img/bg-hero.png"
-                alt="Human Web Design — Imagen principal"
-            />
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">+150%</span>
+                        <span class="stat-label">Aumento de consultas promedio</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">+5</span>
+                        <span class="stat-label">Proyectos entregados</span>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -118,11 +119,12 @@
         <div class="container">
         <p class="logo-bar-label">Proyectos que ya confían en nosotros</p>
         <div class="logo-bar-row">
-            <img src="assets/img/logo-strikebox.png" alt="Strikebox" />
-            <img src="assets/img/logo-strikeshop.png" alt="Strikeshop" />
-            <img src="assets/img/logo-legendfactory.png" alt="Legend Factory" />
-            <img src="assets/img/logo-hidrovulk.png" alt="Hidrovulk" />
-            <img src="assets/img/logo-deathzine.png" alt="Death Zine" />
+            <img src="assets/img/logo-strikebox.webp" alt="Strikebox" width="768" height="512" loading="lazy" decoding="async" />
+            <img src="assets/img/logo-strikeshop.webp" alt="Strikeshop" width="768" height="512" loading="lazy" decoding="async" />
+            <img src="assets/img/logo-legendfactory.webp" alt="Legend Factory" width="768" height="512" loading="lazy" decoding="async" />
+            <img src="assets/img/logo-hidrovulk.webp" alt="Hidrovulk" width="768" height="512" loading="lazy" decoding="async" />
+            <img src="assets/img/logo-deathzine.webp" alt="Death Zine" width="768" height="512" loading="lazy" decoding="async" />
+            <img src="assets/img/logo-hitpass.webp" alt="Hit Pass" width="768" height="512" loading="lazy" decoding="async" />
         </div>
         </div>
     </section>
@@ -133,41 +135,51 @@
         ============================================================ -->
     <section class="services-section" id="servicios">
         <div class="container">
-        <div class="services-header">
-            <div>
-            <span class="section-label">Lo que hacemos</span>
-            <h2 class="section-title">Soluciones digitales<br><span>a tu medida</span></h2>
+            <div class="services-header">
+                <div>
+                <span class="section-label">Lo que hacemos</span>
+                <h2 class="section-title">Soluciones digitales<br><span>a tu medida</span></h2>
+                </div>
+                <a href="servicios.html" class="btn btn-outline">Ver todos los servicios →</a>
             </div>
-            <a href="servicios.html" class="btn btn-outline">Ver todos los servicios →</a>
-        </div>
 
-        <div class="services-grid">
-            <div class="service-card">
-            <div class="service-icon icon-m">🚀</div>
-            <h3>Landing Page</h3>
-            <p>Páginas diseñadas para convertir visitas en clientes potenciales con CTAs estratégicos.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon icon-m">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h12"/></svg>
+                    </div>
+                    <h3>Landing Page</h3>
+                    <p>Páginas diseñadas para convertir visitas en clientes potenciales con CTAs estratégicos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon icon-c">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3>Web Institucional</h3>
+                    <p>Presencia digital completa para tu empresa: quiénes somos, servicios y contacto.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon icon-y">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    </div>
+                    <h3>E-Commerce</h3>
+                    <p>Tiendas online con catálogo de productos, carrito de compras y medios de pago.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon icon-g">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    </div>
+                    <h3>Sitios de Reservas</h3>
+                    <p>Agenda online para gimnasios, clínicas o servicios con recordatorios automáticos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon icon-p">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    </div>
+                    <h3>Consultoría Web</h3>
+                    <p>Revisamos tu sitio actual y te entregamos un informe con oportunidades de mejora.</p>
+                </div>
             </div>
-            <div class="service-card">
-            <div class="service-icon icon-c">🏢</div>
-            <h3>Web Institucional</h3>
-            <p>Presencia digital completa para tu empresa: quiénes somos, servicios y contacto.</p>
-            </div>
-            <div class="service-card">
-            <div class="service-icon icon-y">🛍️</div>
-            <h3>E-Commerce</h3>
-            <p>Tiendas online con catálogo de productos, carrito de compras y medios de pago.</p>
-            </div>
-            <div class="service-card">
-            <div class="service-icon icon-g">📅</div>
-            <h3>Sitios de Reservas</h3>
-            <p>Agenda online para gimnasios, clínicas o servicios con recordatorios automáticos.</p>
-            </div>
-            <div class="service-card">
-            <div class="service-icon icon-p">🔍</div>
-            <h3>Consultoría Web</h3>
-            <p>Revisamos tu sitio actual y te entregamos un informe con oportunidades de mejora.</p>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -177,52 +189,52 @@
         ============================================================ -->
     <section class="portfolio-section" id="portafolio">
         <div class="container">
-        <div class="portfolio-header">
-            <div>
-            <span class="section-label">Proyectos recientes</span>
-            <h2 class="section-title">Nuestro <span>trabajo</span></h2>
-            </div>
-            <p class="section-sub">Una muestra de lo que creamos para nuestros clientes.</p>
-        </div>
-
-        <div class="portfolio-grid">
-            <div class="project-card">
-            <div class="project-thumb thumb-grad-1">
-                <img src="assets/img/logo-strikebox.png" alt="Strikebox" />
-            </div>
-            <div class="project-info">
-                <span class="project-tag">Landing Page</span>
-                <h3>Strikebox</h3>
-                <p>Landing de alto impacto para dojo de artes marciales con sección de planes, horarios y CTA directo a WhatsApp.</p>
-            </div>
+            <div class="portfolio-header">
+                <div>
+                <span class="section-label">Proyectos recientes</span>
+                <h2 class="section-title">Nuestro <span>trabajo</span></h2>
+                </div>
+                <p class="section-sub">Una muestra de lo que creamos para nuestros clientes.</p>
             </div>
 
-            <div class="project-card">
-            <div class="project-thumb thumb-grad-2">
-                <img src="assets/img/logo-hidrovulk.png" alt="Hidrovulk" />
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <div class="project-thumb thumb-grad-1">
+                    <img src="assets/img/logo-strikebox.webp" alt="Strikebox" width="768" height="512" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-info">
+                    <span class="project-tag">Landing Page</span>
+                    <h3>Strikebox</h3>
+                    <p>Landing de alto impacto para dojo de artes marciales con sección de planes, horarios y CTA directo a WhatsApp.</p>
+                    <div class="project-result"><strong>Resultado:</strong> <span>Consultas el día del lanzamiento. Entregado en 6 días.</span></div>
+                    <a href="https://strikebox.cl" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb thumb-grad-4">
+                    <img src="assets/img/logo-hidrovulk.webp" alt="Hidrovulk" width="768" height="512" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-info">
+                    <span class="project-tag">Landing Page</span>
+                    <h3>Hidrovulk</h3>
+                    <p>Landing page para empresa de servicios de grúa y vulcanización, en taller y en ruta.</p>
+                    <div class="project-result"><strong>Resultado:</strong> <span>+130% interacciones en WhatsApp. Entregado en 5 días.</span></div>
+                    <a href="https://hidrovulk.netlify.app" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb thumb-grad-2">
+                    <img src="assets/img/logo-strikeshop.webp" alt="Strikeshop" width="768" height="512" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-info">
+                    <span class="project-tag">Catálogo Online</span>
+                    <h3>Strikeshop</h3>
+                    <p>Catálogo online para tienda de ropa y accesorios de artes marciales con filtro por categorías.</p>
+                    <div class="project-result"><strong>Resultado:</strong> <span>+150% flujo de clientes. Entregado en 7 días.</span></div>
+                    <a href="https://strikebox.cl/strikeshop" class="project-link" target="_blank" rel="noopener">Ver proyecto →</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-info">
-                <span class="project-tag">Landing Page</span>
-                <h3>Hidrovulk</h3>
-                <p>Landing page para empresa de servicios de grúa y vulcanización, tanto en taller como en ruta.</p>
-            </div>
-            </div>
-
-            <div class="project-card">
-            <div class="project-thumb thumb-grad-5">
-                <img src="assets/img/logo-deathzine.png" alt="Death Zine" />
-            </div>
-            <div class="project-info">
-                <span class="project-tag">Revista Digital</span>
-                <h3>Death Zine</h3>
-                <p>Portal web para revista de difusión y reseñas de conciertos y bandas de rock/metal.</p>
-            </div>
-            </div>
-        </div>
-
-        <div class="portfolio-cta">
-            <a href="portafolio.html" class="btn btn-primary">Ver todo el portafolio →</a>
-        </div>
         </div>
     </section>
 
@@ -235,43 +247,41 @@
         <div class="about-grid">
 
             <div class="about-text">
-            <span class="section-label">Quiénes somos</span>
-            <h2 class="section-title">Construimos el futuro<br><span>digital</span> de tu negocio</h2>
+            <span class="section-label">Cómo trabajamos</span>
+            <h2 class="section-title">Trato directo.<br><span>Resultados</span> concretos.</h2>
             <p>
-                Somos una agencia creada en 2026, con el propósito de ayudar a negocios,
-                gimnasios y emprendimientos a tener su propia web sin que les cueste un riñón.
-                Queremos llevar a cada negocio al siguiente nivel digital, otorgándoles un sitio
-                web premium pero con toda la esencia de cada negocio.
+            Cada proyecto es construido por el mismo desarrollador que cotiza, diseña y entrega.
+            Sin capas intermedias, sin malentendidos, sin sorpresas en el precio final.
             </p>
-            <p style="margin-top:.85rem">
-                Creemos que cada emprendedor merece una presencia digital que le haga justicia:
-                funcional, bella y hecha para vender.
+            <p class="about-secondary-copy">
+            Trabajamos con plazos fijos, entregas reales y comunicación directa en cada etapa.
+            Tu negocio no espera, nosotros tampoco.
             </p>
-            <a href="#contacto" class="btn btn-primary" style="margin-top:1.75rem">Conversemos →</a>
+            <a href="#contacto" class="btn btn-primary about-cta">Conversemos →</a>
 
             <div class="about-features">
                 <div class="about-feature">
-                <div class="about-feature-icon">🤝</div>
-                <div class="about-feature-text">
-                    <strong>Trato directo, sin intermediarios</strong>
-                    <span>Hablas directo con el desarrollador que va a construir tu sitio. Nada de coordinadores ni malentendidos.</span>
+                    <div class="about-feature-icon">🤝</div>
+                        <div class="about-feature-text">
+                            <strong>Trato directo, sin intermediarios</strong>
+                            <span>Hablas directo con el desarrollador que va a construir tu sitio. Nada de coordinadores ni malentendidos.</span>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">⚡</div>
+                        <div class="about-feature-text">
+                            <strong>Entregas en menos de 2 semanas</strong>
+                            <span>Las agencias grandes te hacen esperar meses. Nosotros no.</span>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✏️</div>
+                        <div class="about-feature-text">
+                            <strong>Revisiones sin costo extra</strong>
+                            <span>Incluimos rondas de ajuste hasta que el resultado te convenza. Tu satisfacción es parte del trato.</span>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                <div class="about-feature">
-                <div class="about-feature-icon">⚡</div>
-                <div class="about-feature-text">
-                    <strong>Entregas en menos de 2 semanas</strong>
-                    <span>Las agencias grandes te hacen esperar meses. Nosotros no.</span>
-                </div>
-                </div>
-                <div class="about-feature">
-                <div class="about-feature-icon">✏️</div>
-                <div class="about-feature-text">
-                    <strong>Revisiones sin costo extra</strong>
-                    <span>Incluimos rondas de ajuste hasta que el resultado te convenza. Tu satisfacción es parte del trato.</span>
-                </div>
-                </div>
-            </div>
             </div>
 
             <div class="ceo-card">
@@ -298,28 +308,20 @@
         <div class="contact-grid">
 
             <div class="contact-info">
-            <span class="section-label">Hablemos</span>
-            <h2>¿Tienes un proyecto en mente?</h2>
-            <p>Cuéntanos qué necesitas y te enviaremos una cotización sin compromiso en menos de 24 horas.</p>
+                <span class="section-label">Hablemos</span>
+                <h2>¿Tienes un proyecto en mente?</h2>
+                <p>Cuéntanos qué necesitas y te enviaremos una cotización sin compromiso en menos de 24 horas.</p>
 
-            <div class="contact-details">
-                <div class="contact-detail">
-                <div class="contact-detail-icon">📍</div>
-                <span>Concepción, Chile</span>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">📍</div>
+                        <span>Chile — atención 100% remota</span>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">📱</div>
+                        <a href="https://wa.me/56973410591" target="_blank" rel="noopener">WhatsApp directo</a>
+                    </div>
                 </div>
-                <div class="contact-detail">
-                <div class="contact-detail-icon">✉️</div>
-                <a href="mailto:human.desarrolloweb@gmail.com">human.desarrolloweb@gmail.com</a>
-                </div>
-                <div class="contact-detail">
-                <div class="contact-detail-icon">📞</div>
-                <a href="tel:+56973410591">+56 9 7341 0591</a>
-                </div>
-                <div class="contact-detail">
-                <div class="contact-detail-icon">📱</div>
-                <a href="https://wa.me/56973410591" target="_blank" rel="noopener">WhatsApp directo</a>
-                </div>
-            </div>
             </div>
 
             <div class="contact-form">
@@ -357,11 +359,31 @@
                 <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto, objetivos, plazos…" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center">
+                <div class="form-consent">
+                    <input
+                        type="checkbox"
+                        id="consentimiento_privacidad"
+                        name="consentimiento_privacidad"
+                        required
+                        aria-describedby="consentimiento-ayuda"
+                    />
+                    <div>
+                        <label for="consentimiento_privacidad">
+                            Acepto los términos, condiciones,
+                            <a href="privacidad.html" target="_blank" rel="noopener noreferrer">políticas de privacidad</a>
+                            y protección de datos según la Ley 21.719.
+                        </label>
+                        <small id="consentimiento-ayuda">
+                            Debes aceptar esta autorización antes de enviar tu solicitud.
+                        </small>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
                 Enviar mensaje
                 </button>
 
-                <div id="form-status" role="alert"></div>
+                <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
             </form>
             </div>
 
@@ -375,7 +397,7 @@
         ============================================================ -->
     <section class="testimonials-section">
         <div class="container">
-        <div style="text-align:center">
+        <div class="section-heading-centered">
             <span class="section-label">Lo que dicen nuestros clientes</span>
             <h2 class="section-title">Resultados <span>reales</span></h2>
         </div>
@@ -426,55 +448,77 @@
         ============================================================ -->
     <section class="faq-section" id="faq">
         <div class="container">
-        <div class="faq-header">
-            <span class="section-label">Preguntas frecuentes</span>
-            <h2 class="section-title">¿Tienes <span>dudas</span>?</h2>
-            <p class="section-sub">Respondemos las consultas más comunes sobre nuestros servicios.</p>
-        </div>
-
-        <div class="faq-list">
-            <div class="faq-item">
-            <div class="faq-question">
-                <span>¿Cuánto tiempo demora el desarrollo de un sitio web?</span>
-                <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer">
-                <p>El tiempo varía según la complejidad del proyecto. Una Landing Page puede estar lista en 5–7 días hábiles, mientras que un sitio institucional completo o un e-commerce puede tomar entre 2 y 4 semanas. Siempre establecemos plazos claros antes de comenzar.</p>
-            </div>
+            <div class="faq-header">
+                <span class="section-label">Preguntas frecuentes</span>
+                <h2 class="section-title">¿Tienes <span>dudas</span>?</h2>
+                <p class="section-sub">Respondemos las consultas más comunes sobre nuestros servicios.</p>
             </div>
 
-            <div class="faq-item">
-            <div class="faq-question">
-                <span>¿Qué incluye el servicio de diseño web?</span>
-                <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer">
-                <p>Cada proyecto incluye diseño personalizado, desarrollo responsivo, integración de formulario de contacto, optimización básica de SEO y una revisión de ajustes post-entrega. Dependiendo del plan, también incluye dominio y hosting.</p>
-            </div>
-            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span>¿Cuánto tiempo demora el desarrollo de un sitio web?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1" hidden>
+                        <div class="faq-answer-inner">
+                            <p>El tiempo varía según la complejidad del proyecto. Una Landing Page puede estar lista en 5–7 días hábiles, mientras que un sitio institucional completo o un e-commerce puede tomar entre 2 y 4 semanas. Siempre establecemos plazos claros antes de comenzar.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-            <div class="faq-question">
-                <span>¿Puedo modificar el sitio una vez entregado?</span>
-                <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer">
-                <p>Sí. Al momento de la entrega recibirás todos los archivos del proyecto y una guía básica de uso. Si necesitas modificaciones mayores, ofrecemos planes de mantenimiento mensual o trabajamos por cotización adicional.</p>
-            </div>
-            </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span>¿Cuánto cuesta una página web con Human Web Design?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2" hidden>
+                        <div class="faq-answer-inner">
+                            <p>El valor depende del tipo de proyecto. Las Landing Pages parten desde $80.000 CLP + IVA, los sitios institucionales desde $150.000 CLP + IVA y los e-commerce desde $250.000 CLP + IVA. Cada cotización es personalizada según los requerimientos específicos de tu negocio. Escríbenos y te enviamos una propuesta sin compromiso en menos de 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-            <div class="faq-question">
-                <span>¿Trabajan con clientes fuera de Concepción?</span>
-                <div class="faq-icon">+</div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span>¿Qué incluye el servicio de diseño web?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3" hidden>
+                        <div class="faq-answer-inner">
+                            <p>Cada proyecto incluye diseño personalizado, desarrollo responsivo, integración de formulario de contacto, optimización básica de SEO y una revisión de ajustes post-entrega. Dependiendo del plan, también incluye dominio y hosting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span>¿Puedo modificar el sitio una vez entregado?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4" hidden>
+                        <div class="faq-answer-inner">
+                            <p>Sí. Al momento de la entrega recibirás todos los archivos del proyecto y una guía básica de uso. Si necesitas modificaciones mayores, ofrecemos planes de mantenimiento mensual o trabajamos por cotización adicional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+                        <span>¿Trabajan con clientes fuera de Concepción?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5" hidden>
+                        <div class="faq-answer-inner">
+                            <p>¡Por supuesto! Trabajamos de forma 100% remota, así que podemos colaborar con clientes de cualquier ciudad de Chile o el extranjero. Toda la comunicación es por videollamada, WhatsApp o correo electrónico.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-answer">
-                <p>¡Por supuesto! Trabajamos de forma 100% remota, así que podemos colaborar con clientes de cualquier ciudad de Chile o el extranjero. Toda la comunicación es por videollamada, WhatsApp o correo electrónico.</p>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
+
+    </main>
 
 
     <!-- ============================================================
@@ -510,7 +554,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>Copyright &copy; 2026 Human Web Design. Todos los derechos reservados</p>
+                <p>Copyright &copy; 2026 Human Web Design | Todos los derechos reservados</p>
                 <a href="privacidad.html">Términos, Condiciones, Privacidad y Protección de Datos</a>
             </div>
         </div>
@@ -538,7 +582,7 @@
         "name": "Human Web Design",
         "description": "Agencia de diseño web especializada en gimnasios y emprendedores.",
         "url": "https://humanwebdesign.cl",
-        "logo": "https://humanwebdesign.cl/assets/img/logo.png",
+        "logo": "https://humanwebdesign.cl/assets/img/logo.webp",
         "telephone": "+56973410591",
         "email": "human.desarrolloweb@gmail.com",
         "address": {
@@ -555,6 +599,6 @@
     }
     </script>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260622-faqslow" defer></script>
     </body>
 </html>

@@ -10,44 +10,45 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500\&family=Inter:wght@400;500;600;700;800\&family=JetBrains+Mono:wght@500\&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260622-faqslow" />
 </head>
 
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/img/logo.png" alt="Human Web Design" />
-        Human <span>Web</span> Design
-      </a>
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="index.html#nosotros">Nosotros</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
-      </div>
-      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="mobile-menu" aria-label="Menú móvil">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="portafolio.html">Portafolio</a>
-      <a href="index.html#nosotros">Nosotros</a>
-      <a href="index.html#contacto">Contacto</a>
-      <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
-    </nav>
-  </header>
+        <div class="container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/img/logo.webp" alt="Human Web Design" width="256" height="256" decoding="async" />
+            Human <span>Web</span> Design
+        </a>
 
+        <nav class="nav-links" aria-label="Navegación principal">
+            <a href="servicios.html">Servicios</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-cta">
+            <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
+        </div>
+
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        </div>
+
+        <nav class="mobile-menu" aria-label="Menú móvil">
+            <a href="servicios.html">Servicios</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="index.html#contacto" class="btn btn-primary">Cotizar proyecto</a>
+        </nav>
+    </header>
+
+  <main id="main-content">
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -79,7 +80,7 @@
         <!-- Strikebox -->
         <div class="project-card" data-category="landing-page">
           <div class="project-thumb thumb-grad-1">
-            <img src="assets/img/logo-strikebox.png" alt="Strikebox" />
+            <img src="assets/img/logo-strikebox.webp" alt="Strikebox" width="768" height="512" loading="lazy" decoding="async" />
           </div>
           <div class="project-info">
             <span class="project-tag">Landing Page</span>
@@ -96,7 +97,7 @@
         <!-- Strikeshop -->
         <div class="project-card" data-category="ecommerce">
           <div class="project-thumb thumb-grad-2">
-            <img src="assets/img/logo-strikeshop.png" alt="Strikeshop" />
+            <img src="assets/img/logo-strikeshop.webp" alt="Strikeshop" width="768" height="512" loading="lazy" decoding="async" />
           </div>
           <div class="project-info">
             <span class="project-tag">Catálogo Online</span>
@@ -113,7 +114,7 @@
         <!-- Legend Factory -->
         <div class="project-card" data-category="landing-page">
           <div class="project-thumb thumb-grad-3">
-            <img src="assets/img/logo-legendfactory.png" alt="Legend Factory" />
+            <img src="assets/img/logo-legendfactory.webp" alt="Legend Factory" width="768" height="512" loading="lazy" decoding="async" />
           </div>
           <div class="project-info">
             <span class="project-tag">Landing Page</span>
@@ -130,7 +131,7 @@
         <!-- Hidrovulk -->
         <div class="project-card" data-category="landing-page">
           <div class="project-thumb thumb-grad-4">
-            <img src="assets/img/logo-hidrovulk.png" alt="Hidrovulk" />
+            <img src="assets/img/logo-hidrovulk.webp" alt="Hidrovulk" width="768" height="512" loading="lazy" decoding="async" />
           </div>
           <div class="project-info">
             <span class="project-tag">Landing Page</span>
@@ -147,13 +148,26 @@
         <!-- Death Zine -->
         <div class="project-card" data-category="web-institucional">
           <div class="project-thumb thumb-grad-5">
-            <img src="assets/img/logo-deathzine.png" alt="Death Zine" />
+            <img src="assets/img/logo-deathzine.webp" alt="Death Zine" width="768" height="512" loading="lazy" decoding="async" />
           </div>
           <div class="project-info">
             <span class="badge-wip">En desarrollo</span>
             <span class="project-tag">Web Institucional</span>
             <h3>Death Zine</h3>
-            <p>Portal web para revista de difusión y reseñas de conciertos y bandas de rock/metal.</p>
+            <p>Web magazine dinámica para la difusión de un medio independiente de rock/metal chileno. Cuenta con secciones optimizadas para reseñas de discos, crónicas de eventos en vivo y entrevistas, integrando un diseño responsivo enfocado en la experiencia de lectura y consumo multimedia.</p>
+          </div>
+        </div>
+
+        <!-- Hit Pass -->
+        <div class="project-card" data-category="reservas">
+          <div class="project-thumb thumb-grad-5">
+            <img src="assets/img/logo-hitpass.webp" alt="Hit Pass" width="768" height="512" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-info">
+            <span class="badge-wip">En desarrollo</span>
+            <span class="project-tag">Sitio de Reservas</span>
+            <h3>Hit Pass</h3>
+            <p>Plataforma premium de alto impacto para la gestión y venta automatizada de entradas a eventos, conciertos y documentales/cine independiente. Desarrollada a medida bajo una arquitectura robusta que integra una cartelera dinámica con filtros avanzados por categoría, buscador optimizado y despacho automatizado de pases digitales.</p>
           </div>
         </div>
 
@@ -164,7 +178,7 @@
 
 
   <!-- CTA FINAL -->
-  <section style="padding:5rem 0; background:#F8F9FB;">
+  <section class="portfolio-cta-section">
     <div class="container">
       <div class="cta-banner">
         <h2>¿Tu proyecto podría ser el próximo?</h2>
@@ -176,6 +190,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
 
   <!-- FOOTER -->
@@ -227,6 +243,6 @@
     </svg>
   </a>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260622-faqslow" defer></script>
 </body>
 </html>
